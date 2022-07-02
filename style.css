@@ -38,3 +38,87 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
+.product {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--color-neutral-white);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.product__photo {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  max-width: 40rem;
+  height: 32rem;
+}
+
+.product__content {
+  padding: 2rem;
+  max-width: 23rem;
+  height: 32rem;
+}
+
+.product__title {
+  text-transform: uppercase;
+  font-family: var(--font-family-montserrat);
+  letter-spacing: 8px;
+  color: var(--color-neutral-dark-grayish-blue);
+  margin-bottom: 1rem;
+}
+
+.product__name {
+  font-family: var(--font-family-fraunces);
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.product__description {
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-montserrat);
+  color: var(--color-neutral-very-dark-blue);
+  line-height: 1.5;
+  max-width: 25ch;
+  margin-bottom: 2rem;
+  font-size: var(--font-size-body);
+}
+
+.product__prices {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product__sale-price {
+  font-size: 2.5rem;
+  font-family: var(--font-family-fraunces);
+  font-weight: var(--font-weight-700);
+  color: var(--color-primary-dark-cyan);
+}
+
+.product__original-price {
+  font-size: 1rem;
+  font-family: var(--font-family-montserrat);
+  font-weight: var(--font-weight-500);
+  color: var(--color-neutral-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.btn-add-to-cart {
+  background-color: var(--color-primary-dark-cyan);
+  border: none;
+  color: var(--color-neutral-white);
+  padding: 1rem 2rem;
+  font-family: var(--font-family-montserrat);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: var(--font-weight-700);
+  border-radius: 8px;
+  width: 100%;
+}
