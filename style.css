@@ -51,7 +51,7 @@ body {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   max-width: 40rem;
-  height: 32rem;
+  height: 30rem;
   display: block;
 }
 
@@ -66,7 +66,7 @@ body {
 .product__content {
   padding: 2rem;
   max-width: 23rem;
-  height: 32rem;
+  height: 30rem;
 }
 
 .product__title {
