@@ -32,11 +32,11 @@ html {
 }
 
 body {
-  background-color: var(--color-primary-cream);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: var(--color-primary-cream);
 }
 
 .product {
@@ -134,9 +134,12 @@ body {
 /* @media; */
 
 @media only screen and (max-width: 450px) {
+  .container {
+    padding: 3rem;
+  }
+
   .product {
     flex-direction: column;
-    margin: 0 10rem;
   }
 
   .product__photo--desktop {
