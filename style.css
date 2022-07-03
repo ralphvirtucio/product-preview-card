@@ -129,6 +129,12 @@ body {
   font-weight: var(--font-weight-700);
   border-radius: 8px;
   width: 100%;
+  cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+  background-color: hsl(158, 36%, 20%);
+  color: var(--color-neutral-white);
 }
 
 /* @media; */
