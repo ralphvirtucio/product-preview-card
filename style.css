@@ -35,61 +35,59 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: var(--color-primary-cream);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 15%;
 }
 
 .product {
   display: flex;
-  align-items: center;
-  background-color: var(--color-neutral-white);
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  justify-content: center;
 }
 
 .product__photo--desktop {
+  max-width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  max-width: 40rem;
-  height: 30rem;
   display: block;
 }
 
 .product__photo--mobile {
+  max-width: 100%;
   border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  max-width: 40rem;
-  height: 32rem;
+  border-top-right-radius: 8px;
   display: none;
 }
 
 .product__content {
-  padding: 2rem;
-  max-width: 23rem;
-  height: 30rem;
+  background-color: var(--color-neutral-white);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 1.5rem;
 }
 
 .product__title {
   text-transform: uppercase;
   font-family: var(--font-family-montserrat);
-  letter-spacing: 8px;
-  color: var(--color-neutral-dark-grayish-blue);
-  margin-bottom: 1rem;
+  color: var(--color-neutral-very-dark-blue);
+  letter-spacing: 5px;
+  margin-bottom: 1.5rem;
 }
 
 .product__name {
   font-family: var(--font-family-fraunces);
-  font-size: 2.5rem;
   line-height: 1;
   margin-bottom: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .product__description {
-  font-size: var(--font-size-body);
   font-family: var(--font-family-montserrat);
-  color: var(--color-neutral-very-dark-blue);
+  color: var(--color-neutral-dark-grayish-blue);
   line-height: 1.5;
-  max-width: 25ch;
   margin-bottom: 2rem;
   font-size: var(--font-size-body);
 }
@@ -97,90 +95,78 @@ body {
 .product__prices {
   display: flex;
   align-items: center;
+  margin-bottom: 1.5rem;
   gap: 2rem;
-  margin-bottom: 1rem;
 }
 
 .product__sale-price {
-  font-size: 2.5rem;
   font-family: var(--font-family-fraunces);
-  font-weight: var(--font-weight-700);
+  font-size: 2rem;
   color: var(--color-primary-dark-cyan);
 }
 
 .product__original-price {
-  font-size: 1rem;
   font-family: var(--font-family-montserrat);
-  font-weight: var(--font-weight-500);
   color: var(--color-neutral-dark-grayish-blue);
   text-decoration: line-through;
+  font-weight: var(--font-weight-500);
 }
 
-.btn-add-to-cart {
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
   background-color: var(--color-primary-dark-cyan);
   border: none;
-  color: var(--color-neutral-white);
-  padding: 1rem 2rem;
-  font-family: var(--font-family-montserrat);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-weight: var(--font-weight-700);
-  border-radius: 8px;
   width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--color-neutral-white);
+  font-family: var(--font-family-montserrat);
+  font-weight: var(--font-weight-500);
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.btn-add-to-cart:hover {
-  background-color: hsl(158, 36%, 20%);
-  color: var(--color-neutral-white);
+.btn:hover {
+  background-color: hsl(158, 36%, 27%);
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 375px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
   .product {
     flex-direction: column;
-    align-items: stretch;
   }
 
   .product__photo--desktop {
+    max-width: 100%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    max-width: 40rem;
-    height: 32rem;
     display: none;
   }
-
   .product__photo--mobile {
+    max-width: 100%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    max-width: 30rem;
-    height: 20rem;
     display: block;
   }
-
   .product__content {
-    max-width: 26rem;
-    height: 26rem;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
 
+  .product__name {
+    font-size: 1.8rem;
+  }
+
   .product__description {
-    max-width: 34ch;
-  }
-
-  .btn-add-to-cart {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .product {
-    align-items: center;
-  }
-
-  .btn-add-to-cart {
-    width: 100%;
+    line-height: 2;
+    margin-bottom: 3rem;
+    font-size: 0.8rem;
   }
 }
