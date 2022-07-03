@@ -133,7 +133,7 @@ body {
   background-color: hsl(158, 36%, 27%);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
   .container {
     max-width: 100%;
     padding: 1rem;
