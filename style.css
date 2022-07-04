@@ -39,27 +39,18 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  max-width: 15%;
+.product__photo--mobile {
+  max-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block;
 }
 
 .product {
   display: flex;
   justify-content: center;
-}
-
-.product__photo--desktop {
-  max-width: 100%;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  display: block;
-}
-
-.product__photo--mobile {
-  max-width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  display: none;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .product__content {
@@ -72,24 +63,25 @@ body {
 .product__title {
   text-transform: uppercase;
   font-family: var(--font-family-montserrat);
-  color: var(--color-neutral-very-dark-blue);
+  color: var(--color-neutral-dark-grayish-blue);
   letter-spacing: 5px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .product__name {
   font-family: var(--font-family-fraunces);
   line-height: 1;
-  margin-bottom: 1.5rem;
-  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .product__description {
   font-family: var(--font-family-montserrat);
   color: var(--color-neutral-dark-grayish-blue);
-  line-height: 1.5;
-  margin-bottom: 2rem;
-  font-size: var(--font-size-body);
+  line-height: 2;
+  margin-bottom: 3.5rem;
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-500);
 }
 
 .product__prices {
@@ -133,40 +125,8 @@ body {
   background-color: hsl(158, 36%, 27%);
 }
 
-@media only screen and (max-width: 450px) {
-  .container {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
+@media only screen and (min-width: 1024px) {
   .product {
-    flex-direction: column;
-  }
-
-  .product__photo--desktop {
-    max-width: 100%;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    display: none;
-  }
-  .product__photo--mobile {
-    max-width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    display: block;
-  }
-  .product__content {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
-
-  .product__name {
-    font-size: 2.5rem;
-  }
-
-  .product__description {
-    line-height: 2;
-    margin-bottom: 3rem;
-    font-size: 0.8rem;
+    flex-direction: row;
   }
 }
