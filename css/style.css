@@ -45,6 +45,7 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
+  object-fit: cover;
   max-width: 100%;
   display: block;
 }
@@ -83,14 +84,16 @@ body {
   grid-template-columns: 1fr 1fr;
   border-radius: 12px;
   overflow: hidden;
-  width: 42rem;
+  max-width: 42rem;
+}
+.product__image {
+  height: 100%;
 }
 .product__content {
   padding: 2rem;
   background-color: hsl(0deg, 0%, 100%);
 }
 .product__category {
-  display: inline-block;
   text-transform: uppercase;
   color: hsl(228deg, 12%, 48%);
   letter-spacing: 12px;
@@ -115,7 +118,6 @@ body {
 }
 .product__prices--normal {
   color: hsl(228deg, 12%, 48%);
-  text-decoration: line-through;
   font-size: 0.8rem;
   font-weight: 500;
 }

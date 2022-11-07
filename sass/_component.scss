@@ -10,7 +10,11 @@ body {
   grid-template-columns: 1fr 1fr;
   border-radius: 12px;
   overflow: hidden;
-  width: 42rem;
+  max-width: 42rem;
+
+  &__image {
+    height: 100%;
+  }
 
   &__content {
     padding: 2rem;
@@ -18,7 +22,6 @@ body {
   }
 
   &__category {
-    display: inline-block;
     text-transform: uppercase;
     color: $color-neutral-2;
     letter-spacing: 12px;
@@ -45,7 +48,6 @@ body {
     margin-bottom: 2rem;
     &--normal {
       color: $color-neutral-2;
-      text-decoration: line-through;
       font-size: 0.8rem;
       font-weight: 500;
     }
