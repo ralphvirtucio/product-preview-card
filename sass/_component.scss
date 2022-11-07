@@ -10,7 +10,7 @@ body {
   grid-template-columns: 1fr 1fr;
   border-radius: 12px;
   overflow: hidden;
-  max-width: 38rem;
+  max-width: 42rem;
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
