@@ -86,7 +86,7 @@ body {
   overflow: hidden;
   max-width: 38rem;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   .product {
     grid-template-columns: 1fr;
     max-width: 22.5rem;
@@ -105,7 +105,7 @@ body {
   letter-spacing: 12px;
   margin-bottom: 1rem;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   .product__category {
     font-size: 0.8rem;
   }
@@ -116,7 +116,7 @@ body {
   line-height: 1;
   margin-bottom: 2rem;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   .product__name {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -134,7 +134,7 @@ body {
   gap: 2rem;
   margin-bottom: 2rem;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   .product__prices {
     margin-bottom: 1rem;
   }
