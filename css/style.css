@@ -115,6 +115,7 @@ body {
   font-size: 2.5rem;
   line-height: 1;
   margin-bottom: 2rem;
+  font-weight: 700;
 }
 @media only screen and (max-width: 768px) {
   .product__name {
@@ -163,6 +164,10 @@ body {
   color: hsl(0deg, 0%, 100%);
   font-weight: 500;
   width: 100%;
+  cursor: pointer;
+}
+.btn--add-to-cart:hover {
+  background-color: #244c3d;
 }
 
 /*# sourceMappingURL=style.css.map */
