@@ -84,7 +84,13 @@ body {
   grid-template-columns: 1fr 1fr;
   border-radius: 12px;
   overflow: hidden;
-  max-width: 42rem;
+  max-width: 38rem;
+}
+@media only screen and (max-width: 1000px) {
+  .product {
+    grid-template-columns: 1fr;
+    max-width: 22.5rem;
+  }
 }
 .product__image {
   height: 100%;
@@ -99,22 +105,39 @@ body {
   letter-spacing: 12px;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 1000px) {
+  .product__category {
+    font-size: 0.8rem;
+  }
+}
 .product__name {
   font-family: "Fraunces", serif;
   font-size: 2.5rem;
   line-height: 1;
   margin-bottom: 2rem;
 }
+@media only screen and (max-width: 1000px) {
+  .product__name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
 .product__description {
   color: hsl(228deg, 12%, 48%);
   margin-bottom: 1rem;
   font-size: 0.875rem;
+  line-height: 1.8;
 }
 .product__prices {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .product__prices {
+    margin-bottom: 1rem;
+  }
 }
 .product__prices--normal {
   color: hsl(228deg, 12%, 48%);

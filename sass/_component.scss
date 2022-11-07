@@ -10,8 +10,12 @@ body {
   grid-template-columns: 1fr 1fr;
   border-radius: 12px;
   overflow: hidden;
-  max-width: 42rem;
+  max-width: 38rem;
 
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    max-width: 22.5rem;
+  }
   &__image {
     height: 100%;
   }
@@ -26,6 +30,10 @@ body {
     color: $color-neutral-2;
     letter-spacing: 12px;
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 0.8rem;
+    }
   }
 
   &__name {
@@ -33,12 +41,18 @@ body {
     font-size: 2.5rem;
     line-height: 1;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__description {
     color: $color-neutral-2;
     margin-bottom: 1rem;
     font-size: $body-font-size;
+    line-height: 1.8;
   }
 
   &__prices {
@@ -46,6 +60,11 @@ body {
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: 1000px) {
+      margin-bottom: 1rem;
+    }
+
     &--normal {
       color: $color-neutral-2;
       font-size: 0.8rem;
