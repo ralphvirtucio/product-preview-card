@@ -7,46 +7,54 @@ body {
 
 .product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 42rem;
+  grid-template-columns: 1fr;
+  padding: 1rem;
 
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    max-width: 22.5rem;
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    width: 42rem;
+    border-radius: 8px;
+    overflow: hidden;
   }
+
   &__image {
     height: 100%;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    @media only screen and (min-width: 1024px) {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-top-right-radius: 0px;
+    }
   }
 
   &__content {
-    padding: 2rem;
     background-color: $color-white;
+    padding: 1.5rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    @media only screen and (min-width: 1024px) {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 0;
+    }
   }
 
   &__category {
     text-transform: uppercase;
     color: $color-neutral-2;
-    letter-spacing: 12px;
-    margin-bottom: 1rem;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 0.8rem;
-    }
+    letter-spacing: 6px;
+    margin-bottom: 0.9rem;
+    font-size: 0.85rem;
   }
 
   &__name {
     font-family: $fraunces-font;
-    font-size: 2.5rem;
     line-height: 1;
-    margin-bottom: 2rem;
-    font-weight: 700;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 1rem;
   }
 
   &__description {
@@ -58,12 +66,16 @@ body {
 
   &__prices {
     display: flex;
-    align-items: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    align-items: center;
 
-    @media only screen and (max-width: 768px) {
-      margin-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    &--sale {
+      font-family: $fraunces-font;
+      color: $color-primary-1;
+      font-weight: 700;
+      font-size: 2rem;
     }
 
     &--normal {
@@ -71,25 +83,7 @@ body {
       font-size: 0.8rem;
       font-weight: 500;
     }
-
-    &--sale {
-      font-family: $fraunces-font;
-      color: $color-primary-1;
-      font-weight: 700;
-      font-size: 2.5rem;
-    }
   }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 .btn--add-to-cart {
@@ -109,3 +103,119 @@ body {
     background-color: darken($color-primary-1, 15%);
   }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// .product {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   border-radius: 12px;
+//   overflow: hidden;
+//   max-width: 42rem;
+
+//   @media only screen and (max-width: 768px) {
+//     grid-template-columns: 1fr;
+//     max-width: 22.5rem;
+//   }
+//   &__image {
+//     height: 100%;
+//   }
+
+//   &__content {
+//     padding: 2rem;
+//     background-color: $color-white;
+//   }
+
+//   &__category {
+//     text-transform: uppercase;
+//     color: $color-neutral-2;
+//     letter-spacing: 12px;
+//     margin-bottom: 1rem;
+
+//     @media only screen and (max-width: 768px) {
+//       font-size: 0.8rem;
+//     }
+//   }
+
+//   &__name {
+//     font-family: $fraunces-font;
+//     font-size: 2.5rem;
+//     line-height: 1;
+//     margin-bottom: 2rem;
+//     font-weight: 700;
+
+//     @media only screen and (max-width: 768px) {
+//       font-size: 2rem;
+//       margin-bottom: 1rem;
+//     }
+//   }
+
+//   &__description {
+//     color: $color-neutral-2;
+//     margin-bottom: 1rem;
+//     font-size: $body-font-size;
+//     line-height: 1.8;
+//   }
+
+//   &__prices {
+//     display: flex;
+//     align-items: center;
+//     gap: 2rem;
+//     margin-bottom: 2rem;
+
+//     @media only screen and (max-width: 768px) {
+//       margin-bottom: 1rem;
+//     }
+
+//     &--normal {
+//       color: $color-neutral-2;
+//       font-size: 0.8rem;
+//       font-weight: 500;
+//     }
+
+//     &--sale {
+//       font-family: $fraunces-font;
+//       color: $color-primary-1;
+//       font-weight: 700;
+//       font-size: 2.5rem;
+//     }
+//   }
+// }
+
+// .sr-only {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   margin: -1px;
+//   overflow: hidden;
+//   clip: rect(0, 0, 0, 0);
+//   border: 0;
+// }
+
+// .btn--add-to-cart {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 0.85rem;
+//   background-color: $color-primary-1;
+//   border: none;
+//   padding: 0.85rem 0;
+//   border-radius: 8px;
+//   color: $color-white;
+//   font-weight: 500;
+//   width: 100%;
+//   cursor: pointer;
+//   &:hover {
+//     background-color: darken($color-primary-1, 15%);
+//   }
+// }
