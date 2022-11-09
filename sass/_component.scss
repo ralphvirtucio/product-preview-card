@@ -7,45 +7,61 @@ body {
 
 .product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 42rem;
+  grid-template-columns: 1fr;
+  padding: 1rem;
 
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    max-width: 22.5rem;
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    width: 42rem;
   }
+
   &__image {
     height: 100%;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    @media only screen and (min-width: 1024px) {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-top-right-radius: 0px;
+    }
   }
 
   &__content {
-    padding: 2rem;
     background-color: $color-white;
+    padding: 1.5rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    @media only screen and (min-width: 1024px) {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 0;
+      padding: 2rem;
+    }
   }
 
   &__category {
     text-transform: uppercase;
     color: $color-neutral-2;
-    letter-spacing: 12px;
-    margin-bottom: 1rem;
+    letter-spacing: 6px;
+    margin-bottom: 0.9rem;
+    font-size: 0.85rem;
 
-    @media only screen and (max-width: 768px) {
-      font-size: 0.8rem;
+    @media only screen and (min-width: 1024px) {
+      font-size: 1rem;
     }
   }
 
   &__name {
     font-family: $fraunces-font;
-    font-size: 2.5rem;
     line-height: 1;
-    margin-bottom: 2rem;
-    font-weight: 700;
+    margin-bottom: 1rem;
 
-    @media only screen and (max-width: 768px) {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    @media only screen and (min-width: 1024px) {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -58,25 +74,22 @@ body {
 
   &__prices {
     display: flex;
-    align-items: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    align-items: center;
 
-    @media only screen and (max-width: 768px) {
-      margin-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    &--sale {
+      font-family: $fraunces-font;
+      color: $color-primary-1;
+      font-weight: 700;
+      font-size: 2rem;
     }
 
     &--normal {
       color: $color-neutral-2;
       font-size: 0.8rem;
       font-weight: 500;
-    }
-
-    &--sale {
-      font-family: $fraunces-font;
-      color: $color-primary-1;
-      font-weight: 700;
-      font-size: 2.5rem;
     }
   }
 }
@@ -97,4 +110,15 @@ body {
   &:hover {
     background-color: darken($color-primary-1, 15%);
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
