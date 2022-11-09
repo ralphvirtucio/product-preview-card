@@ -35,6 +35,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- Mobile First Approach
 
 ### What I learned
 
