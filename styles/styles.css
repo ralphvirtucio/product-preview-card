@@ -107,7 +107,7 @@ select {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  max-inline-size: 37rem;
+  max-inline-size: 41rem;
 }
 .product-card__content {
   padding-block: 1.5rem;
@@ -143,6 +143,17 @@ select {
   .product-card {
     grid-template-columns: 1fr 1fr;
   }
+  .product-card__content {
+    padding-inline: 2rem;
+    padding-block: 2rem;
+  }
+  .product-card__name {
+    margin-block-start: 1.25rem;
+    margin-block-end: 1.5rem;
+  }
+  .product-card__description {
+    margin-block-end: 1.8125rem;
+  }
 }
 
 .product-card__prices {
@@ -150,6 +161,11 @@ select {
   align-items: center;
   gap: 1.1875rem;
   margin-block-end: 1.25rem;
+}
+@media only screen and (min-width: 48rem) {
+  .product-card__prices {
+    margin-block-end: 1.875rem;
+  }
 }
 .product-card__prices--sale {
   color: hsl(158, 36%, 37%);

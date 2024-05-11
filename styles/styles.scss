@@ -142,7 +142,7 @@ select {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  max-inline-size: 37rem;
+  max-inline-size: 41rem;
 
   &__content {
     padding-block: 1.5rem;
@@ -182,6 +182,20 @@ select {
 
  @media only screen and (min-width: 48rem) {
     grid-template-columns: 1fr 1fr;
+
+    &__content {
+      padding-inline: 2rem;
+      padding-block: 2rem;
+    }
+
+    &__name {
+      margin-block-start: 1.25rem;
+      margin-block-end: 1.5rem;
+    }
+
+    &__description {
+      margin-block-end: 1.8125rem;
+    }
  }
 }
 
@@ -191,6 +205,10 @@ select {
   align-items: center;
   gap: 1.1875rem;
   margin-block-end: 1.25rem;
+
+  @media only screen and (min-width: 48rem) {
+    margin-block-end: 1.875rem;
+  }
 
   &--sale{
     color: $deep-aquamarine;
