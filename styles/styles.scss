@@ -87,6 +87,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: $bg-cream;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -97,7 +100,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
   display: block;
 }
 
@@ -128,3 +132,105 @@ select {
 /* --------------------------
   RESET END
 ----------------------------*/
+
+
+.product-card{
+  background-color: $pure-white;
+  border-radius: 10px;
+  margin-block: 1.75rem;
+  margin-inline: 1rem;
+  overflow: hidden;
+
+  &__content {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+  }
+
+
+ &__tag {
+    color: $aurometal-saurus;
+    text-transform: uppercase;
+    font-family: $ff-body;
+    letter-spacing: 5px;
+
+    strong {
+      font-weight: 400;
+    }
+ }
+
+ &__name {
+  font-family: $ff-heading;
+  line-height: 1;
+  margin-block-start: 0.75rem;
+  margin-block-end: 1rem;
+  font-size: 2rem;
+ }
+
+ &__description {
+  font-family: $ff-body;
+  font-size: $fs-body;
+  line-height: 1.75;
+  margin-block-end: 1.5rem;
+  font-weight: $fw-500;
+  color: $aurometal-saurus;
+ }
+}
+
+
+.product-card__prices {
+  display: flex;
+  align-items: center;
+  gap: 1.1875rem;
+  margin-block-end: 1.25rem;
+
+  &--sale{
+    color: $deep-aquamarine;
+    font-family: $ff-heading;
+    font-size: 2rem;
+    font-weight: $fw-700;
+  }
+
+  &--original {
+    color: $aurometal-saurus;
+    text-decoration: line-through;
+    font-size: 0.8125rem;
+    font-weight: $fw-500;
+    font-family: $ff-body;
+  }
+}
+
+
+.product-card__form{
+
+  .btn__add-cart {
+    color: $pure-white;
+    background-color: $deep-aquamarine;
+    inline-size: 100%;
+    padding-block: 0.9375rem;
+    border: none;
+    border-radius: 8px;
+    font-family: $ff-body;
+    font-size: $fs-body;
+    font-weight: $fw-700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6875rem;
+    transition: background-color .25s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px hsl(158, 42%, 30%);
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    // &:hover {
+    //   box-shadow: 0 4px $deep-aquamarine__hover;
+    //   background-color: $deep-aquamarine__hover;
+    // }
+
+    span  {
+      line-height: 0;
+    }
+  }
+}

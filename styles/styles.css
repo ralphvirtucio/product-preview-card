@@ -56,6 +56,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: hsl(30, 38%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -66,7 +69,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
   display: block;
 }
 
@@ -95,5 +99,85 @@ select {
 /* --------------------------
   RESET END
 ----------------------------*/
+.product-card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  margin-block: 1.75rem;
+  margin-inline: 1rem;
+  overflow: hidden;
+}
+.product-card__content {
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+}
+.product-card__tag {
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+}
+.product-card__tag strong {
+  font-weight: 400;
+}
+.product-card__name {
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  margin-block-start: 0.75rem;
+  margin-block-end: 1rem;
+  font-size: 2rem;
+}
+.product-card__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  margin-block-end: 1.5rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+}
+
+.product-card__prices {
+  display: flex;
+  align-items: center;
+  gap: 1.1875rem;
+  margin-block-end: 1.25rem;
+}
+.product-card__prices--sale {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.product-card__prices--original {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-card__form .btn__add-cart {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  inline-size: 100%;
+  padding-block: 0.9375rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6875rem;
+  transition: background-color 0.25s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px hsl(158, 42%, 30%);
+}
+.product-card__form .btn__add-cart:focus {
+  box-shadow: none;
+}
+.product-card__form .btn__add-cart span {
+  line-height: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */

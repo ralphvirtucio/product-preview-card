@@ -31,34 +31,34 @@
   </head>
 
   <body>
-    <!-- 
-    Perfume Gabrielle Essence Eau De Parfum A floral, solar and voluptuous interpretation
-    composed by Olivier Polge, Perfumer-Creator for the House of CHANEL. $149.99 $169.99
-    Add to Cart -->
-
-    <main>
-      <div>
-        <section></section>
-        <section>
-          <p><strong>Perfume</strong></p>
-          <h1>Gabrielle Essence Eau De Parfum</h1>
-          <p>
+    <main class="product-card">
+      <!-- <div> -->
+        <section class="product-card__img">
+          <picture >
+            <source media="(min-width: 48rem)" srcset="./images/image-product-desktop.jpg">
+            <img src="./images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum">
+          </picture>
+        </section>
+        <section class="product-card__content">
+          <p class="product-card__tag"><strong>Perfume</strong></p>
+          <h1 class="product-card__name">Gabrielle Essence Eau De Parfum</h1>
+          <p class="product-card__description">
             A floral, solar and voluptuous interpretation composed by Olivier Polge,
             Perfumer-Creator for the House of CHANEL.
           </p>
-          <div>
-            <div>
-              <em>Sale Price</em>
+          <div class="product-card__prices">
+            <div class="product-card__prices--sale">
+              <em class="sr-only">Sale Price</em>
               <p>$149.99</p>
             </div>
-            <div>
-              <em>Original Price</em>
+            <div class="product-card__prices--original">
+              <em class="sr-only">Original Price</em>
               <p>$169.99</p>
             </div>
           </div>
 
-          <form>
-            <button>
+          <form class="product-card__form">
+            <button class="btn__add-cart">
               <span>
                 <svg
                   width="15"
@@ -73,7 +73,7 @@
             </button>
           </form>
         </section>
-      </div>
+      <!-- </div> -->
     </main>
   </body>
 </html>
