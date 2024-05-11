@@ -140,6 +140,9 @@ select {
   margin-block: 1.75rem;
   margin-inline: 1rem;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-inline-size: 37rem;
 
   &__content {
     padding-block: 1.5rem;
@@ -164,6 +167,7 @@ select {
   margin-block-start: 0.75rem;
   margin-block-end: 1rem;
   font-size: 2rem;
+  text-wrap: balance;
  }
 
  &__description {
@@ -173,6 +177,11 @@ select {
   margin-block-end: 1.5rem;
   font-weight: $fw-500;
   color: $aurometal-saurus;
+  text-wrap: balance;
+ }
+
+ @media only screen and (min-width: 48rem) {
+    grid-template-columns: 1fr 1fr;
  }
 }
 

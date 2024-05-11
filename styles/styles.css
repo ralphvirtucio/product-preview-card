@@ -105,6 +105,9 @@ select {
   margin-block: 1.75rem;
   margin-inline: 1rem;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-inline-size: 37rem;
 }
 .product-card__content {
   padding-block: 1.5rem;
@@ -125,6 +128,7 @@ select {
   margin-block-start: 0.75rem;
   margin-block-end: 1rem;
   font-size: 2rem;
+  text-wrap: balance;
 }
 .product-card__description {
   font-family: "Montserrat", sans-serif;
@@ -133,6 +137,12 @@ select {
   margin-block-end: 1.5rem;
   font-weight: 500;
   color: hsl(228, 12%, 48%);
+  text-wrap: balance;
+}
+@media only screen and (min-width: 48rem) {
+  .product-card {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .product-card__prices {
